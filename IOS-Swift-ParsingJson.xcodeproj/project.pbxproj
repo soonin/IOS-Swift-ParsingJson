@@ -22,6 +22,7 @@
 		FA407B412054CE4100E8D730 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA407B442054CE4100E8D730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA407B462054CE4100E8D730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA407B4C2054CF1D00E8D730 /* course.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = course.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 				FA407B412054CE4100E8D730 /* Assets.xcassets */,
 				FA407B432054CE4100E8D730 /* LaunchScreen.storyboard */,
 				FA407B462054CE4100E8D730 /* Info.plist */,
+				FA407B4C2054CF1D00E8D730 /* course.json */,
 			);
 			path = "IOS-Swift-ParsingJson";
 			sourceTree = "<group>";
