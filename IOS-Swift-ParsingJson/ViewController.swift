@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let jasonUrlString = "https://raw.githubusercontent.com/soonin/IOS-Swift-ParsingJson/master/IOS-Swift-ParsingJson/course.json"
+        let jasonUrlString = "https://raw.githubusercontent.com/soonin/IOS-Swift-ParsingJson/master/IOS-Swift-ParsingJson/courses.json"
         guard  let url = URL(string: jasonUrlString) else {return}
         
         URLSession.shared.dataTask(with: url) { (data, respons, err) in
@@ -42,8 +42,8 @@ class ViewController: UIViewController {
 //            print(dataString)
             
             do {
-                let course = try JSONDecoder().decode(Course.self , from: data)
-                print(course)
+                let courses = try JSONDecoder().decode([Course].self , from: data)
+                print(courses)
 //                // Swift 2/3/Objective C
 //                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
 //
