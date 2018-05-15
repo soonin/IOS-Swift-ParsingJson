@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA34698E20A772D7000CCCB0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA34698D20A772D7000CCCB0 /* Extensions.swift */; };
 		FA407B3B2054CE4100E8D730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA407B3A2054CE4100E8D730 /* AppDelegate.swift */; };
 		FA407B3D2054CE4100E8D730 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA407B3C2054CE4100E8D730 /* ViewController.swift */; };
 		FA407B402054CE4100E8D730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA407B3E2054CE4100E8D730 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA34698D20A772D7000CCCB0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA407B372054CE4100E8D730 /* IOS-Swift-ParsingJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Swift-ParsingJson.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA407B3A2054CE4100E8D730 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA407B3C2054CE4100E8D730 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,7 @@
 		FA407B462054CE4100E8D730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA407B4C2054CF1D00E8D730 /* course.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = course.json; sourceTree = "<group>"; };
 		FAC4C3B3205F767F0074F4E3 /* courses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
+		FAC4C45620675EB50074F4E3 /* website_description.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = website_description.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA34698C20A772A4000CCCB0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FA34698D20A772D7000CCCB0 /* Extensions.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		FA407B2E2054CE4100E8D730 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				FA407B3A2054CE4100E8D730 /* AppDelegate.swift */,
+				FA34698C20A772A4000CCCB0 /* Helper */,
 				FA407B3C2054CE4100E8D730 /* ViewController.swift */,
 				FA407B3E2054CE4100E8D730 /* Main.storyboard */,
 				FA407B412054CE4100E8D730 /* Assets.xcassets */,
@@ -64,6 +76,7 @@
 				FA407B462054CE4100E8D730 /* Info.plist */,
 				FA407B4C2054CF1D00E8D730 /* course.json */,
 				FAC4C3B3205F767F0074F4E3 /* courses.json */,
+				FAC4C45620675EB50074F4E3 /* website_description.json */,
 			);
 			path = "IOS-Swift-ParsingJson";
 			sourceTree = "<group>";
@@ -141,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA407B3D2054CE4100E8D730 /* ViewController.swift in Sources */,
+				FA34698E20A772D7000CCCB0 /* Extensions.swift in Sources */,
 				FA407B3B2054CE4100E8D730 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

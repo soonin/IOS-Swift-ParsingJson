@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct WebsiteDescription {
+    let name: String
+    let description: String
+    let courses : [Course]
+}
+
 struct Course: Decodable {
     let id: Int
     let name: String
@@ -25,42 +31,62 @@ struct Course: Decodable {
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var readResult: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
+    @IBAction func readAct(_ sender: UIButton) {
+        
         let jasonUrlString = "https://raw.githubusercontent.com/soonin/IOS-Swift-ParsingJson/master/IOS-Swift-ParsingJson/courses.json"
-        guard  let url = URL(string: jasonUrlString) else {return}
+        guard  let url = URL(string: jasonUrlString)
+            else { self.quickErr(myLine: #line,inputStr: "") ; return }
         
         URLSession.shared.dataTask(with: url) { (data, respons, err) in
             //perhaps check err
             //also perhaps check response
             
-            guard let data = data else {return}
-
-//            // Swift 4
-//            let dataString = String(data: data , encoding: .utf8)
-//            print(dataString)
+            guard let data = data
+                else { self.quickErr(myLine: #line,inputStr: "") ; return }
+            //            // Swift 4
+            //            let dataString = String(data: data , encoding: .utf8)
+            //            print(dataString)
             
             do {
                 let courses = try JSONDecoder().decode([Course].self , from: data)
-                print(courses)
-//                // Swift 2/3/Objective C
-//                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
-//
-//                let course = Course(json: json)
-//                print(course.name)
+                
+                //                // Swift 2/3/Objective C
+                //                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
+                //
+                //                let course = Course(json: json)
+                //                print(course.name)
+                var tempStr = ""  //courses.description
+                
+                for anItem in courses  {
+                    tempStr += String(anItem.id) + anItem.name + "\n"
+                }
+                
+                DispatchQueue.main.async {
+                    self.readResult!.text = tempStr
+                }
+                
 
+                
             } catch let jsonErr {
                 print("Error serializing json :",jsonErr)
             }
-
             
-        }.resume()
+            
+            }.resume()
         
-//        let myCourse =  Course(id: 1, name: "my Course", link: "some Link", imageUrl: "Some image url")
-//        print(myCourse)
-    
+        //        let myCourse =  Course(id: 1, name: "my Course", link: "some Link", imageUrl: "Some image url")
+        //        print(myCourse)
+        
+        
     }
-
+    
+    
 }
 
