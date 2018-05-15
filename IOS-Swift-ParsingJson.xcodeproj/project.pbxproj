@@ -13,6 +13,7 @@
 		FA407B402054CE4100E8D730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA407B3E2054CE4100E8D730 /* Main.storyboard */; };
 		FA407B422054CE4100E8D730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA407B412054CE4100E8D730 /* Assets.xcassets */; };
 		FA407B452054CE4100E8D730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA407B432054CE4100E8D730 /* LaunchScreen.storyboard */; };
+		FA4828E020AA915600DFA578 /* courses_missing.json in Resources */ = {isa = PBXBuildFile; fileRef = FA4828DF20AA915600DFA578 /* courses_missing.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		FA407B442054CE4100E8D730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA407B462054CE4100E8D730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA407B4C2054CF1D00E8D730 /* course.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = course.json; sourceTree = "<group>"; };
+		FA4828DF20AA915600DFA578 /* courses_missing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = courses_missing.json; sourceTree = "<group>"; };
 		FAC4C3B3205F767F0074F4E3 /* courses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
 		FAC4C45620675EB50074F4E3 /* website_description.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = website_description.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				FA407B4C2054CF1D00E8D730 /* course.json */,
 				FAC4C3B3205F767F0074F4E3 /* courses.json */,
 				FAC4C45620675EB50074F4E3 /* website_description.json */,
+				FA4828DF20AA915600DFA578 /* courses_missing.json */,
 			);
 			path = "IOS-Swift-ParsingJson";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA407B452054CE4100E8D730 /* LaunchScreen.storyboard in Resources */,
+				FA4828E020AA915600DFA578 /* courses_missing.json in Resources */,
 				FA407B422054CE4100E8D730 /* Assets.xcassets in Resources */,
 				FA407B402054CE4100E8D730 /* Main.storyboard in Resources */,
 			);

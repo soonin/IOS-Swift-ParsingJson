@@ -8,18 +8,17 @@
 
 import UIKit
 
-struct WebsiteDescription {
+struct WebsiteDescription: Decodable {
     let name: String
     let description: String
     let courses : [Course]
 }
 
 struct Course: Decodable {
-    let id: Int
-    let name: String
-    let link : String
-    let imageUrl: String
-
+    let id: Int?
+    let name: String?
+    let link : String?
+    let imageUrl: String?
 //                // Swift 2/3/Objective C
 //    init(json: [String: Any]) {
 //        id = json["id"] as? Int ??  -1
@@ -40,7 +39,11 @@ class ViewController: UIViewController {
 
     @IBAction func readAct(_ sender: UIButton) {
         
-        let jasonUrlString = "https://raw.githubusercontent.com/soonin/IOS-Swift-ParsingJson/master/IOS-Swift-ParsingJson/courses.json"
+        //let jasonUrlString = "https://raw.githubusercontent.com/soonin/IOS-Swift-ParsingJson/master/IOS-Swift-ParsingJson/course.json"
+        //let jasonUrlString = "https://raw.githubusercontent.com/soonin/IOS-Swift-ParsingJson/master/IOS-Swift-ParsingJson/courses.json"
+        //let jasonUrlString = "https://raw.githubusercontent.com/soonin/IOS-Swift-ParsingJson/master/IOS-Swift-ParsingJson/website_description.json"
+        let jasonUrlString = "https://raw.githubusercontent.com/soonin/IOS-Swift-ParsingJson/master/IOS-Swift-ParsingJson/courses_missing.json"
+        
         guard  let url = URL(string: jasonUrlString)
             else { self.quickErr(myLine: #line,inputStr: "") ; return }
         
@@ -55,24 +58,25 @@ class ViewController: UIViewController {
             //            print(dataString)
             
             do {
-                let courses = try JSONDecoder().decode([Course].self , from: data)
+                //let courses = try JSONDecoder().decode([Course].self , from: data)
+                let websitesDes = try JSONDecoder().decode(WebsiteDescription.self, from: data)
                 
                 //                // Swift 2/3/Objective C
                 //                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
                 //
                 //                let course = Course(json: json)
                 //                print(course.name)
-                var tempStr = ""  //courses.description
+                var tempStr = "name: " + websitesDes.name + "\n" // courses.description
+                tempStr += "description: " + websitesDes.description + "\n" // courses.description
+                tempStr += "courses: " + websitesDes.courses.description // courses.description
                 
-                for anItem in courses  {
-                    tempStr += String(anItem.id) + anItem.name + "\n"
-                }
+//                for anItem in courses  {
+//                    tempStr += String(anItem.id) + anItem.name + "\n"
+//                }
                 
                 DispatchQueue.main.async {
                     self.readResult!.text = tempStr
                 }
-                
-
                 
             } catch let jsonErr {
                 print("Error serializing json :",jsonErr)
