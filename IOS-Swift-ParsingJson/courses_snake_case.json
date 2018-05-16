@@ -1,1 +1,23 @@
-[{"id":1,"name":"Instagram Firebase","link":"https://www.letsbuildthatapp.com/course/instagram-firebase","image_url":"https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/04782e30-d72a-4917-9d7a-c862226e0a93","number_of_lessons":49},{"id":2,"name":"Podcasts Course","link":"https://www.letsbuildthatapp.com/course/podcasts","image_url":"https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/32f98d9d-5b9b-4a22-a012-6b87fd7158c2","number_of_lessons":39},{"id":3,"name":"Intermediate Training Core Data","link":"https://www.letsbuildthatapp.com/course/intermediate-training-core-data","image_url":"https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/0736fecb-5b88-483b-a83d-ca2a5a6d93f9","number_of_lessons":32}]
+ [
+  {
+  "id": 1,
+  "name": "Instagram Firebase",
+  "link": "https://www.letsbuildthatapp.com/course/instagram-firebase",
+  "image_url": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/04782e30-d72a-4917-9d7a-c862226e0a93",
+  "number_of_lessons": 49
+  },
+  {
+  "id": 2,
+  "name": "Podcasts Course",
+  "link": "https://www.letsbuildthatapp.com/course/podcasts",
+  "image_url": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/32f98d9d-5b9b-4a22-a012-6b87fd7158c2",
+  "number_of_lessons": 39
+  },
+  {
+  "id": 3,
+  "name": "Intermediate Training Core Data",
+  "link": "https://www.letsbuildthatapp.com/course/intermediate-training-core-data",
+  "image_url": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/0736fecb-5b88-483b-a83d-ca2a5a6d93f9",
+  "number_of_lessons": 32
+  }
+  ]
