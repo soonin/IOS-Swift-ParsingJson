@@ -1,1 +1,15 @@
-{"name":"Lets Build That App","description":"Teaching and Building Apps since 1999","courses":[{"id":1,"name":"Instagram Firebase","link":"https://www.letsbuildthatapp.com/course/instagram-firebase","imageUrl":"https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/04782e30-d72a-4917-9d7a-c862226e0a93"},{"name":"Kindle Basic Training"}]}
+{
+    "name": "Lets Build That App",
+    "description": "Teaching and Building Apps since 1999",
+    "courses": [
+                {
+                "id": 1,
+                "name": "Instagram Firebase",
+                "link": "https://www.letsbuildthatapp.com/course/instagram-firebase",
+                "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/04782e30-d72a-4917-9d7a-c862226e0a93"
+                },
+                {
+                "name": "Kindle Basic Training"
+                }
+                ]
+}
