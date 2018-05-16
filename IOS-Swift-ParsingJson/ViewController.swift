@@ -18,6 +18,7 @@ struct Course: Decodable {
     let id: Int?
     let name: String?
     let link : String?
+    
     let imageUrl: String?
 //                // Swift 2/3/Objective C
 //    init(json: [String: Any]) {
@@ -26,6 +27,13 @@ struct Course: Decodable {
 //        link = json["link"] as? String ?? ""
 //        imageUrl = json["imageUrl"] as? String ?? ""
 //    }
+
+    // swift 4.0 Custom Coding Strategy
+    private enum CodingKeys: String, CodingKey {
+        case imageUrl = "image_url"
+        case id, name, link
+    }
+
 }
 
 class ViewController: UIViewController {
@@ -60,17 +68,24 @@ class ViewController: UIViewController {
             //            print(dataString)
             
             do {
+                let decoder = JSONDecoder()
+                // swift 4.1
+                //decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let courses = try decoder.decode([Course].self, from: data)
+                
                 //let courses = try JSONDecoder().decode([Course].self , from: data)
-                let websitesDes = try JSONDecoder().decode(WebsiteDescription.self, from: data)
+                //let websitesDes = try JSONDecoder().decode(WebsiteDescription.self, from: data)
                 
                 //                // Swift 2/3/Objective C
                 //                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
                 //
                 //                let course = Course(json: json)
                 //                print(course.name)
-                var tempStr = "name: " + websitesDes.name + "\n" // courses.description
-                tempStr += "description: " + websitesDes.description + "\n" // courses.description
-                tempStr += "courses: " + websitesDes.courses.description // courses.description
+                
+                var tempStr = courses.description
+//                var tempStr = "name: " + websitesDes.name + "\n" // courses.description
+//                tempStr += "description: " + websitesDes.description + "\n" // courses.description
+//                tempStr += "courses: " + websitesDes.courses.description // courses.description
                 
 //                for anItem in courses  {
 //                    tempStr += String(anItem.id) + anItem.name + "\n"
